@@ -164,7 +164,7 @@ function decompileAPK(file_id){
     var input_file = config.uploadAPKLocation+'/'+file_id+'.apk';
     var output_folder = config.apkDecompileLocation+'/'+file_id;
     var apk_tool = config.apkTool;
-    var command = apk_tool+" d "+input_file+" -fo "+output_folder; // remove -fo in production and add d -f
+    var command = apk_tool+" d -f "+input_file+" "+output_folder; // remove -fo in production and add d -f
     console.log(command);
     const child = exec(command,function(error, stdout, stderr) {
             //console.log("stdout: "+stdout);
@@ -213,7 +213,11 @@ function runSIG(file_id,apk_input_folder){
         args: [apk_input_folder, SIG_output_location]
     };
     PythonShell.run('get_field_type.py', options, function (err, results) {
-        if (err) return err;
+        if (err){
+            //console.log("cb vcb cv bc ");
+            //console.log(err);
+            return err;
+        }
         var output_file = SIG_output_location+"/"+file_id+"_arff_output_complex.arff";
         console.log("File Name: "+output_file);
         fs.readFile(output_file, 'utf8', function(err, contents) {

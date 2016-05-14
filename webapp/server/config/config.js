@@ -6,13 +6,13 @@ module.exports = {
     db: 'mongodb://localhost/apkanalysis',//mongodb://subhasis:subhasis@ec2-52-91-127-226.compute-1.amazonaws.com:27017/apkanalysis
     rootPath: rootPath,
     port: process.env.PORT || 3030,
-    uploadAPKLocation: 'C:\\FileRepo\\apkupload',
-    apkTool: 'C:\\Workspace\\Github\\AndroidAPKAnalysis\\apktool\\apktool',
-    apkDecompileLocation: 'C:\\FileRepo\\apkupload',//'C:\\FileRepo\\apkdecompile',
-    SA_script_location: 'C:\\Workspace\\Github\\AndroidAPKAnalysis\\SMVHunter\\static',
-    SA_output_location: 'C:\\FileRepo\\saoutput',
-    SIG_script_location: 'C:\\Workspace\\Github\\AndroidAPKAnalysis\\smartInputGeneration',
-    SIG_output_location: 'C:\\FileRepo\\sigoutput'
+    uploadAPKLocation: '/Users/Jayprakash/Documents/FileRepo/ApkUpload',
+    apkTool: '/Users/Jayprakash/AndroidAPKAnalysis/SMVHunter/apktool/apktool',
+    apkDecompileLocation: '/Users/Jayprakash/Documents/FileRepo/ApkUpload',//'C:\\FileRepo\\apkdecompile',
+    SA_script_location: '/Users/Jayprakash/AndroidAPKAnalysis/SMVHunter/static',
+    SA_output_location: '/Users/Jayprakash/Documents/FileRepo/saoutput',
+    SIG_script_location: '/Users/Jayprakash/AndroidAPKAnalysis/smartInputGeneration',
+    SIG_output_location: '/Users/Jayprakash/Documents/FileRepo/sigoutput'
   },
   production: {
     rootPath: rootPath,
